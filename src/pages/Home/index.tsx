@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Container,
   Header,
+  Icon,
   UserAvatar,
   UserAvatarButton,
   UserGreeting,
@@ -19,7 +20,7 @@ export const Home: React.FunctionComponent = () => {
       <Header>
         <UserWrapper>
           <UserInfo>
-          <UserAvatarButton onPress={() => {}}>
+            <UserAvatarButton onPress={() => {}}>
               <UserAvatar source={avatarDefault} />
             </UserAvatarButton>
             <UserInfoDetail>
@@ -27,6 +28,7 @@ export const Home: React.FunctionComponent = () => {
               <UserName>Jorge</UserName>
             </UserInfoDetail>
           </UserInfo>
+          <Icon name="power" />
         </UserWrapper>
       </Header>
     </Container>
