@@ -1,13 +1,14 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Home } from './src/pages/Home';
-import theme from './src/global/theme';
+import theme from './src/global/styles/theme';
 import {
   useFonts,
   Roboto_400Regular,
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
 import AppLoading from 'expo-app-loading';
+import { SignIn } from './src/pages/SignIn';
 
 const App: React.FunctionComponent = () => {
   const [fontsLoaded] = useFonts({
