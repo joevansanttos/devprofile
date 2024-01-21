@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { NavigationContainer } from '@react-navigation/native';
 import { Home } from './src/pages/Home';
 import theme from './src/global/styles/theme';
 import {
@@ -9,6 +10,7 @@ import {
 } from '@expo-google-fonts/roboto';
 import AppLoading from 'expo-app-loading';
 import { SignIn } from './src/pages/SignIn';
+import { SignUp } from './src/pages/SignUp';
 
 const App: React.FunctionComponent = () => {
   const [fontsLoaded] = useFonts({
@@ -21,9 +23,11 @@ const App: React.FunctionComponent = () => {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <SignIn />
-    </ThemeProvider>
+    <NavigationContainer>
+      <ThemeProvider theme={theme}>
+        <SignUp />
+      </ThemeProvider>
+    </NavigationContainer>
   );
 };
 
